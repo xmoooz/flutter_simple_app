@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:logging/logging.dart';
+import 'package:flutter_simple_app/src/config/ApplicationConfig.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+  MyApp() {
+    _configureLogger();
+  }
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -23,6 +29,17 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
+
+  _configureLogger() {
+    Logger.root.level = Level.ALL;
+    Logger.root.onRecord.listen((LogRecord rec) {
+      if (ApplicationConfig.isDebug) {
+        print(
+            '[${rec.level.name}][${rec.time}][${rec.loggerName}]: ${rec.message}');
+      }
+    });
+  }
+
 }
 
 class MyHomePage extends StatefulWidget {
@@ -45,7 +62,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
+  final Logger _logger = Logger("StorageManager");
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -53,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
+      _logger.log(Level.INFO, "log test");
       _counter++;
     });
   }
