@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:flutter_simple_app/src/config/ApplicationConfig.dart';
-import 'package:flutter_simple_app/src/screen/HomeScreen.dart';
+import 'package:flutter_simple_app/src/screen/SplashScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,13 +10,12 @@ class MyApp extends StatelessWidget {
     _configureLogger();
   }
 
-  final appTitle = 'simple';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: appTitle,
-      home: HomeScreen(title: appTitle),
+
+      home: SplashScreen(),
     );
   }
 

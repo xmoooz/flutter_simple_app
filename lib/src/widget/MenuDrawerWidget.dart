@@ -9,10 +9,16 @@ class MenuDrawerWidget extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            child: Text('Menu'),
+          UserAccountsDrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.red,
+              color: Colors.deepPurple,
+            ),
+            accountName: Text('username'),
+            accountEmail: Text('email'),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Theme.of(context).platform == TargetPlatform.iOS
+              ? Colors.blue : Colors.deepPurpleAccent,
+              child: Text('P'),
             ),
           ),
           ListTile(
@@ -22,6 +28,7 @@ class MenuDrawerWidget extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => ProfileScreen()));
             },
+            leading: Icon(Icons.settings),
           ),
           ListTile(
             title: Text('About'),
@@ -30,6 +37,7 @@ class MenuDrawerWidget extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => AboutScreen()));
             },
+            leading: Icon(Icons.print),
           ),
         ],
       ),
