@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_simple_app/src/screen/AboutScreen.dart';
-import 'package:flutter_simple_app/src/screen/ProfileScreen.dart';
+import 'package:flutter_simple_app/screen/AboutScreen.dart';
+import 'package:flutter_simple_app/screen/ProfileScreen.dart';
 
 class MenuDrawerWidget extends StatelessWidget {
   @override

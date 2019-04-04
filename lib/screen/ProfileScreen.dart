@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_simple_app/src/widget/RegisterForm.dart';
+import 'package:flutter_simple_app/widget/RegisterForm.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override

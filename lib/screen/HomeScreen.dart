@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_simple_app/src/widget/MenuDrawerWidget.dart';
-import 'package:flutter_simple_app/src/config/ApplicationConfig.dart';
-import 'package:flutter_simple_app/src/widget/SquareWidget.dart';
+import 'package:flutter_simple_app/widget/MenuDrawerWidget.dart';
+import 'package:flutter_simple_app/config/ApplicationConfig.dart';
+import 'package:flutter_simple_app/widget/SquareWidget.dart';
 
 class HomeScreen extends StatelessWidget {
 

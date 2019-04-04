@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
-import 'package:flutter_simple_app/src/config/ApplicationConfig.dart';
-import 'package:flutter_simple_app/src/screen/SplashScreen.dart';
+import 'package:flutter_simple_app/config/ApplicationConfig.dart';
+import 'package:flutter_simple_app/screen/SplashScreen.dart';
 
 void main() => runApp(MyApp());
 

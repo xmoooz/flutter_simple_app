@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_simple_app/src/widget/BackgroundImageClipper.dart';
+import 'package:flutter_simple_app/widget/BackgroundImageClipper.dart';
 
 class SquareWidget extends StatelessWidget {
 
